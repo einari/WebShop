@@ -1,0 +1,24 @@
+<script src="Features/navigation/viewModel.js" type="text/javascript" charset="utf-8"></script>
+<script src="Features/navigation/view.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/x-jquery-tmpl" id="navigationItemTemplate">
+	{{each navigationItems}}
+		<li><a href="#${name}">${name}</a></li>
+	{{/each}}
+</script>
+
+<script type="text/x-jquery-tmpl" id="navigationContentTemplate">
+	{{each navigationItems}}
+		<div id="${name}">
+			${name}
+		</div>
+	{{/each}}
+</script>
+
+<div id="tabs">
+	<ul data-bind="template: 'navigationItemTemplate'">
+	</ul>
+	
+	<div data-bind="template: 'navigationContentTemplate'">
+	</div>
+</div>
