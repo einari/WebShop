@@ -1,14 +1,5 @@
-
-var view = {
-	
-	initialize: function() {
-		alert("HELLO");
-	}
-	
-}
-
-
-function initializeView()
-{
-	$("#tabs").tabs();
-}
+(function() {
+	$(function() {
+		$("#tabs").tabs();
+	});
+})();

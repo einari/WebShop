@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -9,16 +9,63 @@
 	<script src="Scripts/jquery-ui-1.8.16.custom.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="Scripts/jquery.tmpl.js" type="text/javascript" charset="utf-8"></script>
 	<script src="Scripts/knockout-1.3.0beta.debug.js" type="text/javascript" charset="utf-8"></script>
-	
-	
+	<script src="messenger.js" type="text/javascript" charset="utf-8"></script>
+	<script src="messages.js" type="text/javascript" charset="utf-8"></script>
 	
 	<script src="util.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script text="text/javascript">
+		messenger.subscribeTo(NavigateMessage, function(m) {
+			$("#thing").append(m.name);
+		});
+		messenger.subscribeTo(LogMessage, function(m) {
+			console.log(m.message);
+		});
+		
+		
+		function CartSummaryViewModel() {
+			var self = this;
+			
+			this.count = ko.observable(0);
+			
+			messenger.subscribeTo(AddProductToCartMessage, function(m) {
+				self.count(self.count()+1);
+			});
+			
+			messenger.subscribeTo(RemoveProductFromCartMessage, function(m) {
+				self.count(self.count()-1);
+			});
+		};
+		
+
+		$(function() {
+			ko.applyBindings(new CartSummaryViewModel());
+			
+		});
+		
+		
+	</script>
+	
+	<script type="text/x-jquery-tmpl" id="cartItemTemplate">
+		<p>${name} - ${description}</p><button data-bind="click:"></button>
+	</script>
+	
 	<title>index</title>
 </head>
 
 <body>
-	
-	
 	<div data-feature="navigation"></div>
+	
+	
+	<div id="thing">
+	</div>
+	
+	
+	<div>
+		Cartsummary : 
+		<span data-bind="text: count"></span>
+		
+	</div>
+	
 </body>
 </html>

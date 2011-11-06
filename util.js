@@ -1,3 +1,8 @@
+
+
+
+
+
 var util = util || {
 
 /*	
@@ -47,8 +52,13 @@ $(function() {
 		//viewScriptTag.src = "Features/"+feature+"/view.js";
 		//$(this).append(viewScriptTag);
 		$(this).load("Features/"+feature+"/view.html", function() {
-			viewModel.initialize();
-			initializeView();
+
+/*			
+			$ = function(input) {
+				return jQuery(input, target);
+			};*/
+			//viewModel.initialize();
+			//initializeView();
 			//initializeViewModel();
 		});
 
