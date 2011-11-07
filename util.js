@@ -1,8 +1,3 @@
-
-
-
-
-
 var util = util || {
 
 /*	
@@ -29,43 +24,83 @@ $(function() {
 		var target = $(this);
 		
 		var feature = $(this).attr("data-feature");
+
+
+		$.get("Features/"+feature+"/view.html", function(data) {
+			var oldjQuery = jQuery;
+			var old$ = $;
+			var self = $(this);
+
+			/*
+
+			jQuery = function(fn) {
+				console.log("My jQuery");
+				fn();
+				return oldjQuery();
+			};
+
+			$ = jQuery;*/
+			
+
+
+			$ = function(fn) {
+				console.log("Nonnono");
+				
+				if( typeof fn == "function") {
+					fn();
+					return jQuery;
+				}
+				
+				return jQuery(fn);
+			};
+
+
+			old$(target).html(data);
+
+
+			jQuery = oldjQuery;
+			$ = old$;
+
+			
+		});
+
+
+/*
+
+		var oldjQuery = jQuery;
+		var old$ = $;
+		var self = $(this);
+		
+		jQuery = function(fn) {
+			console.log("My jQuery");
+			fn();
+			return oldjQuery();
+		};
+		
+		$ = jQuery;
+		
+		
+		$(function() {
+			console.log("asdasd");
+			
+		});
+		
+		jQuery = oldjQUery;
+		$ = old$;
+
+
+*/		
+
 		
 		
 		/*
-		$.getScript("Features/"+feature+"/view.js", function(data) {
-			alert(data);
-		});
-		
-		
-		
-		$.get("Features/"+feature+"/view.html", function(data) {
-			target.html(data);
-		});
-		*/
-		
-		//var viewScriptTag = $("script").attr("src","Features/"+feature+"/view.js").attr("type","text/javascript");
-		
-		//var viewScriptUrl = "Features/"+feature+"/view.js";
-		
-		//var viewScriptTag = document.createElement("script");
-		//viewScriptTag.type = "text/javascript";
-		//viewScriptTag.src = "Features/"+feature+"/view.js";
-		//$(this).append(viewScriptTag);
 		$(this).load("Features/"+feature+"/view.html", function() {
-
-/*			
-			$ = function(input) {
-				return jQuery(input, target);
-			};*/
-			//viewModel.initialize();
-			//initializeView();
-			//initializeViewModel();
-		});
-
-		
-		//$("body").append($("<script />", { src: viewScriptUrl }))
-		
-		//$("body").append("<script>alert('hello world');<\/script>");
+			
+			
+			
+			var i=0;
+			i++;
+		});*/
 	});
 });
 

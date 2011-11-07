@@ -10,9 +10,9 @@ function LogMessage(message) {
 
 
 function AddProductToCartMessage(product) {
-	
+	this.product = product;
 }
 
 function RemoveProductFromCartMessage(product) {
-	
+	this.product = product;
 }
