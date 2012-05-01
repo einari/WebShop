@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using WebShop.Domain.Accounts;
 using WebShop.Domain.Fees;
+using WebShop.Concepts.Location;
 
 namespace WebShop.Domain.Orders
 {

@@ -1,10 +1,10 @@
-using System;
+using WebShop.Concepts.Products;
 
 namespace WebShop.Domain.Carts
 {
 	public class CartLine
 	{
-		public string ProductId { get; set; }
+		public ProductId ProductId { get; set; }
 		public int Quantity { get; set; }
 		public decimal NetPrice { get; set; }
 		public decimal GrossPrice { get; set; }

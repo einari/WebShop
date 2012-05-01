@@ -34,9 +34,11 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Location\Address.cs" />
+    <Compile Include="Products\ProductId.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Location\" />
+    <Folder Include="Products\" />
   </ItemGroup>
 </Project>
