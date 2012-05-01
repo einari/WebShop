@@ -35,10 +35,12 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Security\User.cs" />
     <Compile Include="Security\IUserService.cs" />
+    <Compile Include="Entities\IEntityContext.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Security\" />
     <Folder Include="Mapping\" />
+    <Folder Include="Entities\" />
   </ItemGroup>
 </Project>
