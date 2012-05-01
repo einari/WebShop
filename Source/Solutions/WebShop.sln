@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShop.Web", "..\WebShop.Web\WebShop.Web.csproj", "{57B6FC59-21BD-4B5A-88EC-C3A40CE51154}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShop.Domain", "..\WebShop.Domain\WebShop.Domain.csproj", "{815A90A8-B3A1-4583-B705-70DD12E2D74C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShop.Infrastructure", "..\WebShop.Infrastructure\WebShop.Infrastructure.csproj", "{1813CCC1-B1CD-421A-8ADD-61D104A540B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShop.Concepts", "..\WebShop.Concepts\WebShop.Concepts.csproj", "{ABE2D0D1-D119-4469-91C4-12B287463DD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Default|Any CPU = Default|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1813CCC1-B1CD-421A-8ADD-61D104A540B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1813CCC1-B1CD-421A-8ADD-61D104A540B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1813CCC1-B1CD-421A-8ADD-61D104A540B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1813CCC1-B1CD-421A-8ADD-61D104A540B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57B6FC59-21BD-4B5A-88EC-C3A40CE51154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B6FC59-21BD-4B5A-88EC-C3A40CE51154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B6FC59-21BD-4B5A-88EC-C3A40CE51154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B6FC59-21BD-4B5A-88EC-C3A40CE51154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{815A90A8-B3A1-4583-B705-70DD12E2D74C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{815A90A8-B3A1-4583-B705-70DD12E2D74C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{815A90A8-B3A1-4583-B705-70DD12E2D74C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{815A90A8-B3A1-4583-B705-70DD12E2D74C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABE2D0D1-D119-4469-91C4-12B287463DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE2D0D1-D119-4469-91C4-12B287463DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE2D0D1-D119-4469-91C4-12B287463DD2}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE2D0D1-D119-4469-91C4-12B287463DD2}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{ABE2D0D1-D119-4469-91C4-12B287463DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE2D0D1-D119-4469-91C4-12B287463DD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = ..\WebShop.Web\WebShop.Web.csproj
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{815A90A8-B3A1-4583-B705-70DD12E2D74C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebShop.Domain</RootNamespace>
+    <AssemblyName>WebShop.Domain</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Carts\Cart.cs" />
+    <Compile Include="Carts\CartLine.cs" />
+    <Compile Include="Orders\Order.cs" />
+    <Compile Include="Accounts\Account.cs" />
+    <Compile Include="Freight\IFreightService.cs" />
+    <Compile Include="Payment\PaymentMethod.cs" />
+    <Compile Include="Orders\IOrderService.cs" />
+    <Compile Include="Carts\ICartRepository.cs" />
+    <Compile Include="Fees\Fee.cs" />
+    <Compile Include="Freight\FreightFee.cs" />
+    <Compile Include="Freight\FreightMethod.cs" />
+    <Compile Include="Orders\OrderLine.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Carts\" />
+    <Folder Include="Orders\" />
+    <Folder Include="Freight\" />
+    <Folder Include="Accounts\" />
+    <Folder Include="Payment\" />
+    <Folder Include="Fees\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebShop.Infrastructure\WebShop.Infrastructure.csproj">
+      <Project>{1813CCC1-B1CD-421A-8ADD-61D104A540B2}</Project>
+      <Name>WebShop.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebShop.Concepts\WebShop.Concepts.csproj">
+      <Project>{ABE2D0D1-D119-4469-91C4-12B287463DD2}</Project>
+      <Name>WebShop.Concepts</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
